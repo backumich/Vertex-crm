@@ -7,7 +7,6 @@ import ua.com.vertex.util.vo.User;
 import ua.com.vertex.util.vo.Users;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,14 +21,14 @@ public class JsonUserReader implements UserReader {
 
 
     public List<User> readUsers(File jsonFile) {
-        Users users;
         List<User> result = null;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        try (FileReader fileReader = new FileReader(jsonFile)) {
+        try {
             String json = new String(Files.readAllBytes(jsonFile.toPath()));
 
-            result = gson.fromJson(json, Users.class).getUsers();
+            Users users = gson.fromJson(json, Users.class);
+            result = users.getUsers();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -54,7 +53,7 @@ public class JsonUserReader implements UserReader {
 
         JsonUserReader reader = new JsonUserReader();
         File jsonFile = new File("/Users/sweet_home/IdeaProjects/vertex-crm/util/src/main/resources/json.txt");
-        reader.writeUsers(jsonFile, users);
+//        reader.writeUsers(jsonFile, users);
 
         List<User> usersFromJson = reader.readUsers(jsonFile);
         System.out.println(usersFromJson);

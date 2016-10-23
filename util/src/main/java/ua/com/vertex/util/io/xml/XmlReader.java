@@ -48,7 +48,7 @@ public class XmlReader implements UserReader {
         XmlReader xmlReader = new XmlReader();
         File xmlFile = new File("/Users/sweet_home/IdeaProjects/vertex-crm/util/src/main/resources/users.xml");
         xmlFile.createNewFile();
-        xmlReader.writeUsers(xmlFile, users);
+//        xmlReader.writeUsers(xmlFile, users);
 
         List<User> usersFromXml = xmlReader.readUsers(xmlFile);
 

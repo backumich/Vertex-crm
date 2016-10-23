@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Kolia"
+      "test": 123
     },
     {
       "id": 2,
