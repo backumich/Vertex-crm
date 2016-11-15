@@ -13,6 +13,6 @@
 <body>
 $END$
 
-<a href="./WEB-INF/jsp/welcome.jsp">click here</a>
+<a href="./welcome">click here</a>
 </body>
 </html>

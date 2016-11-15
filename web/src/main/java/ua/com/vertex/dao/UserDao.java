@@ -1,6 +1,7 @@
 package ua.com.vertex.dao;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import org.springframework.stereotype.Repository;
 import ua.com.vertex.util.vo.User;
 
 import javax.sql.DataSource;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+@Repository
 public class UserDao implements UserDaoInf {
 
     private DataSource dataSource;
