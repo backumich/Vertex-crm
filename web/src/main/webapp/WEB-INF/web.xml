@@ -15,6 +15,7 @@
             org.springframework.web.context.support.AnnotationConfigWebApplicationContext
         </param-value>
     </context-param>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>ua.com.vertex.context.MainContext</param-value>
@@ -55,8 +56,6 @@
 
     <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
-        <url-pattern>/welcome</url-pattern>
-        <url-pattern>/welcome.html</url-pattern>
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>
